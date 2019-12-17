@@ -214,3 +214,5 @@ S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.PopulateMembers
 S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.AddAnnotationstoMembershipType.resources
 S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.AddNameToMembershipType.resources
 S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.SetNameOfMembershipTypes.resources
+S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.AddBirthDatetoCustomerModel.resources
+S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.AddCustomerDataInCustomersTable.resources
