@@ -15,6 +15,7 @@ namespace VideoRentals.Models
         public bool IsSubscribedToNewsletter { get; set; }
         public MembershipType MembershipType { get; set; }
         public byte MemberShipTypeId { get; set; }
+        //[Display(Name= "Date Of Birth")]
         public DateTime? Birthdate { get; set; }
     }
 }
