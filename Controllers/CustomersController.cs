@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
 using VideoRentals.Models;
 using VideoRentals.ViewModels;
 
@@ -33,13 +35,28 @@ namespace VideoRentals.Controllers
             };
             return View("CustomerForm",viewModel);
         }
-
+            
         [HttpPost]
-        public ActionResult Create(Customer customer)
+        public ActionResult Save(Customer customer)
         {
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
+            if(customer.Id==0)
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
 
+               // TryUpdateModel(customerInDb,"",new string[]{"Name","Email"});
+
+               //Usage of automapper for same
+               //Mapper.Map(customer, customerInDb);
+
+               customerInDb.Name = customer.Name;
+               customerInDb.Birthdate = customer.Birthdate;
+               customerInDb.MemberShipTypeId = customer.MemberShipTypeId;
+               customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+            }
+            _context.SaveChanges();
+            
             return RedirectToAction("Index", "Customers");
         }
         
