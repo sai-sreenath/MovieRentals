@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VideoRentals.Models;
+using VideoRentals.ViewModels;
 
 namespace VideoRentals.Controllers
 {
@@ -25,7 +26,18 @@ namespace VideoRentals.Controllers
 
         public ActionResult New()
         {
-            return View();
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(NewCustomerViewModel viewModel)
+        {
+            return View(); 
         }
         
         // GET: Customers
