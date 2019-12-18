@@ -27,7 +27,7 @@ namespace VideoRentals.Controllers
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
-            var viewModel = new CustomerViewModel
+            var viewModel = new CustomerFormViewModel
             {
                 MembershipTypes = membershipTypes
             };
@@ -77,7 +77,7 @@ namespace VideoRentals.Controllers
             if (customer == null)
                 return HttpNotFound();
 
-            var viewModel = new CustomerViewModel
+            var viewModel = new CustomerFormViewModel
             {
                 Customer = customer,
                 MembershipTypes = _context.MembershipTypes.ToList()
