@@ -7,7 +7,7 @@ using VideoRentals.Models;
 
 namespace VideoRentals.ViewModels
 {
-    public class NewCustomerViewModel
+    public class CustomerViewModel
     {
         public IEnumerable<MembershipType> MembershipTypes { get; set; }
 
