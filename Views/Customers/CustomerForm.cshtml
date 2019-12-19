@@ -8,24 +8,27 @@
 
 @using (Html.BeginForm("Save", "Customers"))
 {
+    @Html.ValidationSummary()
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
         @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m=>m.Customer.Name)
+        @Html.ValidationMessageFor(m => m.Customer.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.MemberShipTypeId)
+        @Html.DropDownListFor(m => m.Customer.MemberShipTypeId, new SelectList(Model.MembershipTypes, "Id", "MemberShipName"), "Select Membership Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.MemberShipTypeId)
     </div>
 
     <div class="form-group">
         @*@Html.LabelFor(m => m.Birthdate)*@
         <label>Date Of Birth</label>
         @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m=>m.Customer.Birthdate)
+        @Html.ValidationMessageFor(m => m.Customer.Birthdate)
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Customer.MemberShipTypeId)
-        @Html.DropDownListFor(m => m.Customer.MemberShipTypeId, new SelectList(Model.MembershipTypes, "Id", "MemberShipName"), "Select Membership Type", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m=>m.Customer.MemberShipTypeId)    
-       </div>
+
 
     <div class="checkbox">
         <label>
