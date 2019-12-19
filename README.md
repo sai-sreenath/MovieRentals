@@ -32,3 +32,17 @@ we have to write the jquery code inorder to make custom validations client side.
 
 To check if we validations are running at client/server end,go to networks tab and see the data.
 If present,then we are executing at server end,otherwise client end.
+
+Anti-forgery tokens
+--------------------
+open network tab and click on save request in customerscontroller.
+Now we get HttpPostRequest tab in networks tab.
+on Scrolling down,we see form data being displayed in the body of the request.
+Now,if the user responsible for creating a customer leaves the site without signing out,then he has active session on the server. 
+Now,this data can be used to visit a malicious page. 
+Because this user has an active session on our Web site,These requests will be successfully executed on his behalf.
+We call this kind of attack C S R F or C serve which stands for Krus side request forgery.
+So the hacker forges a request on a different web site and with this technique they can literally execute
+any actions on behalf of the victim.
+
+
