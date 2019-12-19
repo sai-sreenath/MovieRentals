@@ -42,7 +42,7 @@ Now,if the user responsible for creating a customer leaves the site without sign
 Now,this data can be used to visit a malicious page. 
 Because this user has an active session on our Web site,These requests will be successfully executed on his behalf.
 We call this kind of attack C S R F or C serve which stands for Krus side request forgery.
-So the hacker forges a request on a different web site and with this technique they can literally execute.
+So the hacker forges a request on a different web site and with this technique they can literally execute
 any actions on behalf of the victim.
 
 
