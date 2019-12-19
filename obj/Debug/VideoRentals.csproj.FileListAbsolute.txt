@@ -219,3 +219,11 @@ S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.AddCustomerData
 S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.AddMovieandGenreModels.resources
 S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.populateGenresTable.resources
 S:\Dotnetprojects\MovieRentals\obj\Debug\VideoRentals.Migrations.populatemovietable.resources
+S:\Dotnetprojects\MovieRentals\bin\AutoMapper.dll
+S:\Dotnetprojects\MovieRentals\bin\AutoMapper.xml
+S:\Dotnetprojects\MovieRentals\bin\System.Net.Http.Formatting.dll
+S:\Dotnetprojects\MovieRentals\bin\System.Web.Http.dll
+S:\Dotnetprojects\MovieRentals\bin\System.Web.Http.WebHost.dll
+S:\Dotnetprojects\MovieRentals\bin\System.Net.Http.Formatting.xml
+S:\Dotnetprojects\MovieRentals\bin\System.Web.Http.xml
+S:\Dotnetprojects\MovieRentals\bin\System.Web.Http.WebHost.xml
