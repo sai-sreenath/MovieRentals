@@ -18,7 +18,9 @@ namespace VideoRentals.Models
         [Display(Name = "MemberShip Type")]
         public byte MemberShipTypeId { get; set; }
       
-        //[Display(Name= "Date Of Birth")]
+        [Display(Name= "Date Of Birth")]
+        [Min18YearsIfAMember]
+        //If a member selects other tha pay as you go,then he must be 18 years old
         public DateTime? Birthdate { get; set; }
     }
 }

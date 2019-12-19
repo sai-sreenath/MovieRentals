@@ -15,5 +15,8 @@ namespace VideoRentals.Models
         [Required]
         [StringLength(255)]
         public string MemberShipName { get; set; }
+
+        public static readonly byte unknown = 0;
+        public static readonly byte PayAsYouGo = 1;
     }
 }
