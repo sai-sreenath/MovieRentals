@@ -33,5 +33,20 @@ namespace VideoRentals.ViewModels
         public byte? NumberInStock { get; set; }
 
         public string Title { get; set; }
+
+        public MovieFormViewModel()
+        {
+            Id = 0;
+        }
+
+        public MovieFormViewModel(Movie movie)
+        {
+            Id = movie.Id;
+            Name = movie.Name;
+            ReleaseDate = movie.ReleaseDate;
+            NumberInStock = movie.NumberInStock;
+            GenreId = movie.GenreId;
+        }
+
     }
 }
