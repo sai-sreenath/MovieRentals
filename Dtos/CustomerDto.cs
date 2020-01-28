@@ -17,6 +17,8 @@ namespace VideoRentals.Dtos
 
         public byte MemberShipTypeId { get; set; }
 
+        public MembershipTypeDto MembershipType { get; set; }
+
        // [Min18YearsIfAMember]
         //If a member selects other tha pay as you go,then he must be 18 years old
         public DateTime? Birthdate { get; set; }
