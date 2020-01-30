@@ -67,13 +67,14 @@ namespace VideoRentals.Controllers
         //return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
         //}
         public ActionResult Index()
-        { 
-            //var movies = _context.Movies.Include(m => m.Genre).ToList();
-
-            //return View(movies);
-            return View();
+        {
+            if (User.IsInRole("CanManageMovies"))
+                return View("List");
+            else
+                return View("ReadOnlyList");
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
@@ -97,6 +98,7 @@ namespace VideoRentals.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movie movie)
         {
             if (!ModelState.IsValid)
@@ -126,6 +128,7 @@ namespace VideoRentals.Controllers
             return RedirectToAction("Index", "Movies");
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
