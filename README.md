@@ -46,3 +46,39 @@ So the hacker forges a request on a different web site and with this technique t
 any actions on behalf of the victim.
 
 
+OAUTH and Social Logins
+-----------------------
+1)We use an authentication protocol called OSS which stands for open authorization.
+
+2)Let's say John is a new staff member and wants to log into widley with his Facebook account.
+First of all we need to register our application with Facebook to create some kind of partnership.
+Facebook will give us an API key and a secret kind of like a username password.
+We'll use this to talk to Facebook under the hood.
+
+3)Now John wants to log in when he clicks on Facebook log in on our Web site.
+We will redirect him to Facebook and we'll use our API key and secret.
+So Facebook knows this request is coming from Video rentals now to prevent a malicious user from finding our secret.
+
+4)We use HTP as or secure HDTV protocol so the data exchange between these parties will be encrypted and
+no one can intercept this communication.
+OK now Joe is on Facebook.
+He logs in with his username and password on the VideoRentals site.
+We don't know and we don't care what his Facebook credentials are.
+Once he logs into Facebook,Facebook tells him that widley wants to access some basic information about
+his account.
+
+5)Since we registered with Facebook at the beginning.
+Facebook knows the address of Video Rentals, so it will redirect back to our site and it will also pass an
+authorization token. This authorization token tells our site that Facebook could successfully authenticate
+this user.
+
+Now on our site, we get this authorization token and send it back to Facebook with our API key and secret.
+We do this because a hacker may send a random authorisation token to our site.
+So we need to verify that it really came from Facebook.
+That's why we send it back and tell Facebook hey it's me.
+
+Once Facebook says yes it gave,
+And then it will give us an Access token with which we can access some parts of the user's
+profile.
+
+
