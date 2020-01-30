@@ -81,4 +81,9 @@ Once Facebook says yes it gave,
 And then it will give us an Access token with which we can access some parts of the user's
 profile.
 
+Steps to Use social Logins
+--------------------------
+1)First,we need to enable SSL,so that our communication will be on secure channel.
+2)We need to register our application with Facebook,Google ,linkedin or any other social platforms.
+SSL is enbaled in Project in Solution explorer - click F4 -> set SSL Enabled=true
 
