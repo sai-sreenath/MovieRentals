@@ -55,8 +55,8 @@ namespace VideoRentals
             //   consumerSecret: "");
 
             app.UseFacebookAuthentication(
-               appId: "167474334664366",
-               appSecret: "448c6a5ab74625f31f91d6bfbd6abb85");
+               appId: "173339377263999",
+               appSecret: "88c64ac0187e162bf931683664bcc368");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

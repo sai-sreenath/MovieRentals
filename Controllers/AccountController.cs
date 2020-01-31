@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity.Validation;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -156,7 +157,8 @@ namespace VideoRentals.Controllers
                     { 
                         UserName = model.Email, 
                         Email = model.Email,
-                        DrivingLicense = model.DrivingLicense
+                        DrivingLicense = model.DrivingLicense,
+                        Phone = model.Phone
                     };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -383,13 +385,17 @@ namespace VideoRentals.Controllers
                     return View("ExternalLoginFailure");
                 }
                 var user = new ApplicationUser
-                    { UserName = model.Email,
+                    { 
+                        UserName = model.Email,
                         Email = model.Email,
-                        DrivingLicense = model.DrivingLicense
+                        DrivingLicense = model.DrivingLicense,
+                        Phone = model.Phone
                     };
+
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
+
                     result = await UserManager.AddLoginAsync(user.Id, info.Login);
                     if (result.Succeeded)
                     {

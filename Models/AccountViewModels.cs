@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace VideoRentals.Models
@@ -12,6 +13,10 @@ namespace VideoRentals.Models
         [Required]
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
+       
+        [Required]
+        [StringLength(50)]
+        public string Phone { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -88,6 +93,10 @@ namespace VideoRentals.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public String Phone { get; set; }
     }
 
     public class ResetPasswordViewModel
