@@ -10,7 +10,7 @@ using System.Web.Mvc;
     [AllowAnonymous]
     public class HomeController : Controller
     {
-        [OutputCache(Duration = 0,Location = OutputCacheLocation.Server)]
+        [OutputCache(Duration = 0,Location = OutputCacheLocation.Server, NoStore=true)]
         public ActionResult Index()
         {
             return View();
