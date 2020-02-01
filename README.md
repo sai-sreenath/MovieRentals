@@ -87,3 +87,23 @@ Steps to Use social Logins
 2)We need to register our application with Facebook,Google ,linkedin or any other social platforms.
 SSL is enbaled in Project in Solution explorer - click F4 -> set SSL Enabled=true
 
+Lazy Loading
+------------
+1)If you have N customers in the database,we will have one query to get list of customers and N queries to get membershiptype for each
+customer.(worst case scenario-(N+1) issue)
+
+Glimpse -Performance optimization tool
+--------------------------------------
+1) With glimpse,you can easily keep an eye on quieries running in the database by the Entity Framework.
+2)If you find a slow page in the website,open glimpse and see whats happening inside. like what queries are being run on the database,
+Execution time of each quieries.
+3)If you find Entity Framework Query that shows to be slow,then optimize it by creating the stored procedure and calling it via DBContext. 
+
+
+
+
+
+
+
+
+
