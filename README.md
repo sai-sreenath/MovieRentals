@@ -99,6 +99,10 @@ Glimpse -Performance optimization tool
 Execution time of each quieries.
 3)If you find Entity Framework Query that shows to be slow,then optimize it by creating the stored procedure and calling it via DBContext. 
 
+Caching:
+--------
+If the view is specific to a given user,put it on client otherwise put it on server with paramater
+Location = OutputCacheLocation.Server
 
 
 
