@@ -75,9 +75,9 @@ namespace VideoRentals.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            //var customers = GetCustomers();
+            var customers = _context.Customers.ToList();
            // var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-            return View();
+            return View(customers);
         }
 
         //private IEnumerable<Customer> GetCustomers()
