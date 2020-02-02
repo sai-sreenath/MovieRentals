@@ -28,6 +28,6 @@ namespace VideoRentals.Models
         [Display(Name = "Number in Stock")]
         [Range(1,20)]
         public byte NumberInStock { get; set; }
-
+        public byte NumberAvailable { get; set; }
     }
 }
