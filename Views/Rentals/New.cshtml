@@ -86,6 +86,23 @@
                     $("#movie").typeahead("val", "");
                     vm.movieIds.push(movie.id);
                 });
+
+            $("#newRental").submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                        url: "/api/newRentals",
+                        method: "post",
+                        data: vm
+                    })
+                    .done(function() {
+                        console.log("done");
+                    })
+                    .fail(function() {
+                        console.log("Failed");
+                    });
+            });
+
         });
     </script>
 }
