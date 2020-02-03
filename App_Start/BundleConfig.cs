@@ -14,7 +14,8 @@ namespace VideoRentals
                         "~/scripts/bootbox.js",
                         "~/scripts/DataTables/jquery.dataTables.js",
                         "~/scripts/DataTables/dataTables.bootstrap.js",
-                        "~/scripts/typeahead.bundle.js"
+                        "~/scripts/typeahead.bundle.js",
+                        "~/Scripts/toastr.js"
             ));
 
             bundles.Add(new Bundle("~/bundles/jqueryval").Include(
@@ -30,6 +31,7 @@ namespace VideoRentals
                       "~/Content/bootstrap.css",
                       "~/Content/DataTables/css/dataTables.bootstrap.css",
                       "~/Content/typeahead.css",
+                      "~/Content/toastr.css",
                       "~/Content/site.css"));
         }
     }
