@@ -113,7 +113,7 @@ Building Feature systematically:
 5)Extend the domain model(if required)
 6)Build the application
 7)Add the details one by one
-8)Move on to the Front-end
+8)Move on to the Front-end.
 
 
 
