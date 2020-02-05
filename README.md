@@ -104,9 +104,16 @@ Caching:
 If the view is specific to a given user,put it on client otherwise put it on server with paramater
 Location = OutputCacheLocation.Server
 
-
-
-
+Building Feature systematically:
+--------------------------------
+1)Understand the problem
+2)start with the backend
+3)Think of the inputs and outputs 
+4)Declare a simple API
+5)Extend the domain model(if required)
+6)Build the application
+7)Add the details one by one
+8)Move on to the Front-end.
 
 
 
