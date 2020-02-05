@@ -30,6 +30,7 @@ namespace VideoRentals
             bundles.Add(new Bundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/DataTables/css/dataTables.bootstrap.css",
+                      "~/Content/bootstrap-theme1.css",
                       "~/Content/typeahead.css",
                       "~/Content/toastr.css",
                       "~/Content/site.css"));
